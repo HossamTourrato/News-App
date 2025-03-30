@@ -1,4 +1,4 @@
-name: news_app
+name: shop_app
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -34,10 +34,24 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  intl: ^0.20.2
+  flutter_bloc: ^9.1.0
+  bloc: ^9.0.0
+  dio: ^5.8.0+1
+  conditional_builder_null_safety: ^0.0.6
+  shared_preferences: ^2.5.3
+  smooth_page_indicator: ^1.2.1
+  fluttertoast: ^8.2.12
+  equatable: ^2.0.7
+  retrofit: ^4.4.2
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  retrofit_generator: '>=8.0.0 <10.0.0'
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.4
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -51,6 +65,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/images/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
