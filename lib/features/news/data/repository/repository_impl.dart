@@ -16,9 +16,11 @@ class ArticleRepositoryImpl implements ArticleRepository {
     try{
     final httpResponse = await _newApiService.getNewsArticle(
         apiKey: newsAPIKey,
-        q: query);
+        q: query
+    );
 
     if (httpResponse.response.statusCode == HttpStatus.ok) {
+      print("hello hossam this is my data${httpResponse.data}");
       return DataSuccess(httpResponse.data);
     } else {
       return DataFailed(DioException(
