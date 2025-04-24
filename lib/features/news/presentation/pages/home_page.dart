@@ -47,7 +47,8 @@ class NewsHomePage extends StatelessWidget {
           return const Center(child: Icon(Icons.refresh));
         }
         if (state is RemoteArticleFetched) {
-          return ListView.builder(
+
+           return ListView.builder(
             itemBuilder: (context,index){
               return ArticleWidget(
                 article: state.articles![index] ,

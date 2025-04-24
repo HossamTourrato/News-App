@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,10 @@ import '../../domain/entities/article.dart';
 class ArticleWidget extends StatelessWidget {
   final ArticleEntity ? article;
   final void Function(ArticleEntity article) ? onArticlePressed;
-  const ArticleWidget({super.key, this.article, this.onArticlePressed});
+
+  final List<ArticleEntity>? trendingArticles;
+  const ArticleWidget({super.key, this.article, this.onArticlePressed, this.trendingArticles});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -145,6 +149,5 @@ class ArticleWidget extends StatelessWidget {
     );
   }
 
-
-
 }
+
